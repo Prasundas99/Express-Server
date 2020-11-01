@@ -8,7 +8,7 @@ Node.js 0.10 or higher is required.
 
 
 ```bash
-$ npm i
+$ npm express-server-template
 ```
 
 
