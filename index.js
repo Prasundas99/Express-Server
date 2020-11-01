@@ -1,7 +1,15 @@
 const express = require('express')
 const app = express()
 
-app.use(express.static('public'))
+//direct to your static folder
+app.use(express.static('public'));
+
+//For hard coding the  line
+/*
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+*/
 
 //Server Listen
 const PORT = 5000 || process.env.PORT;
