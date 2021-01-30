@@ -1,18 +1,16 @@
-const express = require('express')
-const app = express()
+import express from "express";
+import dotenv from "dotenv";
+import Connect from "./config/db.js";
 
-//direct to your static folder
-app.use(express.static('public'));
+dotenv.config();
+const app = express();
 
-//For hard coding the  line
-/*
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
-*/
+// Connect DB
+Connect();
 
-//Server Listen
 const PORT = 5000 || process.env.PORT;
+
+
 app.listen(PORT, () => {
-     console.log(`Server is listening on port ${PORT}`);
+  console.log(`Server is listening on port ${PORT}`);
 });
